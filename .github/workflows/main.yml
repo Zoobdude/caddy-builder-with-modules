@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: builder
-        uses: Zoobdude/caddy-docker-builder@v0.8
+        uses: Zoobdude/caddy-docker-builder@v0.9
         with:
           modules: |
             github.com/caddy-dns/cloudflare
@@ -16,3 +16,4 @@ jobs:
           docker-username: "zoobdude"
           docker-password: ${{ secrets.DOCKERHUB_TOKEN }}
           tags: "zoobdude/caddy"
+          platforms: linux/amd64,linux/arm64,linux/arm/v7
