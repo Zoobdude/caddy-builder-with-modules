@@ -1,0 +1,15 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  build_container:
+    runs-on: ubuntu-latest
+    name: Build a new container
+    steps:
+      - uses: actions/checkout@v4
+      - id: foo
+        uses: Zoobdude/caddy-docker-builder@v0.1
+        with:
+          modules: |
+            github.com/caddy-dns/cloudflare,
+            xcaddy build --with github.com/porech/caddy-maxmind-geolocation
