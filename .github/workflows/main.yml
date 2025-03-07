@@ -12,7 +12,7 @@ jobs:
         with:
           modules: |
             github.com/caddy-dns/cloudflare
-            github.com/restic/caddy
+            porech/caddy-maxmind-geolocation
           docker-username: "zoobdude"
           docker-password: ${{ secrets.DOCKERHUB_TOKEN }}
           tags: "zoobdude/caddy"
