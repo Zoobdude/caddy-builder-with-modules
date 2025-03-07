@@ -11,5 +11,6 @@ jobs:
         uses: Zoobdude/caddy-docker-builder@v0.3
         with:
           modules: |
-            github.com/caddy-dns/cloudflare,
-            xcaddy build --with github.com/porech/caddy-maxmind-geolocation
+            github.com/caddy-dns/cloudflare
+            github.com/porech/caddy-maxmind-geolocation
+
