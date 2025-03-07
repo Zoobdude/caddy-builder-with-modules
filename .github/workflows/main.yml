@@ -7,10 +7,12 @@ jobs:
     name: Build a new container
     steps:
       - uses: actions/checkout@v4
-      - id: foo
-        uses: Zoobdude/caddy-docker-builder@v0.3
+      - id: builder
+        uses: Zoobdude/caddy-docker-builder@v0.4
         with:
           modules: |
             github.com/caddy-dns/cloudflare
             github.com/porech/caddy-maxmind-geolocation
-
+          docker-username: "zoobdude"
+          docker-password: ${{ secrets.DOCKERHUB_TOKEN }}
+          tags: "zoobdude/caddy"
