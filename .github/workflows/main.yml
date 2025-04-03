@@ -11,11 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: builder
-        uses: Zoobdude/caddy-docker-builder@v0.93
+        uses: Zoobdude/caddy-docker-builder@v0.94
         with:
           modules: |
             github.com/caddy-dns/cloudflare
             github.com/porech/caddy-maxmind-geolocation
+            github.com/greenpau/caddy-security
           docker-username: "zoobdude"
           docker-password: ${{ secrets.DOCKERHUB_TOKEN }}
           tags: "zoobdude/caddy"
