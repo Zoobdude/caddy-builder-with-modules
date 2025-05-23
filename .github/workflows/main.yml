@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: builder
-        uses: Zoobdude/caddy-docker-builder@v2
+        uses: Zoobdude/caddy-docker-builder@6b0810a56058d42181ee0528385eaff10f08a4d9
         with:
           modules: |
             github.com/caddy-dns/cloudflare
