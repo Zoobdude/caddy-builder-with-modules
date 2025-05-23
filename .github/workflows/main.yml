@@ -1,6 +1,10 @@
 on:
   workflow_dispatch:
 
+  push:
+    branches:
+      - 'main'
+  
   schedule:
     - cron: "0 0 1 * *"
 
@@ -11,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: builder
-        uses: Zoobdude/caddy-docker-builder@6b0810a56058d42181ee0528385eaff10f08a4d9
+        uses: Zoobdude/caddy-docker-builder@v2
         with:
           modules: |
             github.com/caddy-dns/cloudflare
@@ -19,5 +23,5 @@ jobs:
             github.com/greenpau/caddy-security@v1.1.29
           docker-username: "zoobdude"
           docker-password: ${{ secrets.DOCKERHUB_TOKEN }}
-          tags: "zoobdude/caddy"
+          image: "zoobdude/caddy"
           platforms: linux/amd64,linux/arm64,linux/arm/v7
