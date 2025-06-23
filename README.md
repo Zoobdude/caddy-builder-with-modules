@@ -8,5 +8,5 @@ The container is [available on the Docker Hub](https://hub.docker.com/r/zoobdude
 
 
 ## Modules
-* [github.com/caddy-dns/cloudflare](github.com/caddy-dns/cloudflare)
-* [github.com/porech/caddy-maxmind-geolocation](github.com/porech/caddy-maxmind-geolocation)
+* [github.com/caddy-dns/cloudflare](https://github.com/caddy-dns/cloudflare)
+* [github.com/porech/caddy-maxmind-geolocation](https://github.com/porech/caddy-maxmind-geolocation)
