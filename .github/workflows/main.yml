@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Build a new container
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - id: builder
         uses: Zoobdude/caddy-docker-builder@v2.1
         with:
